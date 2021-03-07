@@ -2,11 +2,13 @@ This is a script to generate a bootable SD card for a rock64 with full disk encr
 
 To use, you need to download the latest archlinuxarm filesystem tarball into this directory like,
 
+```shell
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz.sig
-(Optional step, not necessary if you already have this on your gpg keyring)
+#Optional step, not necessary if you already have this on your gpg keyring
 gpg --recv-keys 68B3537F39A313B3E574D06777193F152BDBE6A6
 gpg --verify ArchLinuxARM-aarch64-latest.tar.gz.sig
+```
 
 Once you have the tarball, open the install_fde.sh script in a text editor and make sure the DISK path matches where you want to write your new microsd card data. You also need to set your PASSWORD directly, or you can use the provided random password generator.
 
